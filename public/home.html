@@ -1,0 +1,19 @@
+<div class="row feed">
+    <div class="col-md-4 left-side">
+        <h4>Login</h4> <br><br>
+        <input type="text" size="30" placeholder="Username"> <br><br>
+        <input type="text" size="30" placeholder="Password">
+        <br><br>
+        <a href="#!/signup">Not a member? Signup</a>
+    </div>
+    <div class="col-md-8 right-side">
+        <div class="new-meow">
+            <input type="text" class="form-control" ng-model="newMeow" placeholder="What do you have to meow today?">
+            <button class="btn" type="button" ng-click="submitNewMeow();">Submit</button>
+        </div>
+        <h3 ng-repeat="meow in meows">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ meow.text }}
+            <a href ng-click="removeMeow(meow)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+        </h3>
+    </div>
+</div>
